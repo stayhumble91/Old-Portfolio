@@ -54,6 +54,7 @@ li {
 
 .side {
     max-height: 500px;
+    overflow: auto;
 }
 
 p {
@@ -70,4 +71,48 @@ p {
 .sideimg {
     height: 200px;
     width: 200px;
+    margin: 1rem;
+}
+
+#details {
+    font-style: italic;
+}
+
+#details a:hover {
+    color: gray;
+}
+
+/* work page css starts here */
+.samples{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.sampleContent {
+    margin: 0 auto;
+}
+
+.samplehead {
+    text-align: center;
+    font-family: 'Raleway', sans-serif; 
+    margin-top: 6rem; 
+} 
+
+.sampleimg {
+    width: 800px;
+    display: block;
+}
+
+.desc {
+    text-align: center;
+}
+
+.back {
+  text-align: center;
+  margin: 3rem;
+}
+
+.back > a {
+  font-family: 'Raleway', sans-serif;
 }
