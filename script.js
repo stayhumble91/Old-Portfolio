@@ -12,18 +12,23 @@ app.use(express.static(__dirname + '/public'));
 
 
 //load pages
-//home page
+//welcome page
 app.get('/', (req,res) => {
     res.render('pages/welcome');
+});
+
+//home page
+app.get('/index', (req,res) => {
+    res.render('pages/index');
 });
 //work page
 app.get('/work', (req,res) => {
     res.render('pages/work');
-})
+});
 //contact page
 app.get('/contact', (req, res) => {
     res.render('pages/contact');
-})
+});
 
 app.get('*', (req, res) => {
     console.error('404');
