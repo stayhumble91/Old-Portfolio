@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/public'));
 //load pages
 //home page
 app.get('/', (req,res) => {
-    res.render('pages/index');
+    res.render('pages/welcome');
 });
 //work page
 app.get('/work', (req,res) => {

@@ -1,5 +1,6 @@
 body {   
-    background-color: rgb(255, 251, 251);
+    background-color: #000;
+    color: #fff;
 }
 
 .container {
@@ -12,6 +13,7 @@ header {
     /* width: 100%; */
     margin: 0;  
     height: 5rem;
+    color: #fff;
 }
 
 .logo {
@@ -87,6 +89,7 @@ p {
     width: 80%;
     margin: 0 auto;
     padding-top: 2rem;
+    background-color: #fff;
 }
 
 .sampleContent {
@@ -97,6 +100,7 @@ p {
     text-align: center;
     font-family: 'Raleway', sans-serif; 
     margin-top: 6rem; 
+    color: #fff;
 } 
 
 .sampleimg {
