@@ -1,6 +1,13 @@
     <% include ../partials/head %>
     <div class="container">
     <% include ../partials/header %>
-    <h1>Contact</h1>
+    <h1>Talk to me, I talk back.</h1>
+    <form method="POST" action="/send">
+        <input type="text" name="name" placeholder="Name?"></br>
+        <input type="text" name="company" placeholder="Company"></br>
+        <input type="text" name="email" placeholder="Email"> </br>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Talk to me"></textarea>
+        <input type="submit">
+    </form>
     </div>
     <% include ../partials/footer %>

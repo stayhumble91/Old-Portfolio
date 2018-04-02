@@ -2,6 +2,9 @@ console.log("working");
 const express = require('express');
 const ejs = require('ejs');
 const nodemailer = require('nodemailer');
+const path = require('path');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv/config');
 
 //create express instance
 const app = express();
@@ -9,6 +12,8 @@ const app = express();
 //set view engine
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 //load pages
@@ -28,6 +33,48 @@ app.get('/work', (req,res) => {
 //contact page
 app.get('/contact', (req, res) => {
     res.render('pages/contact');
+});
+
+//send email
+app.post("/send", (req,res) => {
+    // console.log(req.body);
+    const output = `
+    You have a new message!!
+
+        Name: ${req.body.name}
+        Email: ${req.body.email}
+        Company: ${req.body.company}
+        Message: ${req.body.message}
+    `;
+
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        secure: false,
+        port: 25,
+        auth: {
+            user: process.env.USER_EMAIL,
+            pass: process.env.USER_PASSWORD
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
+    let mailOptions = {
+        from: '"website" process.env.USER_EMAIL', // source of email
+        to: 'osamaasaid@gmail.com', // list of receivers
+        subject: 'Hello ✔', // Subject line
+        text: output // entire email with the sender info
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+        }
+        console.log('Message sent');
+        console.log(info)
+        // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+        res.render('pages/contact');
+    });
 });
 
 app.get('*', (req, res) => {
