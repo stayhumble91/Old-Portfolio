@@ -126,3 +126,7 @@ p {
 .back > a {
   font-family: 'Raleway', sans-serif;
 }
+
+.container > form {
+    text-align: center
+}

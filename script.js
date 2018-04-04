@@ -5,15 +5,19 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv/config');
+// const flash = require('flash-connect');
 
 //create express instance
 const app = express();
 
 //set view engine
 app.set('view engine', 'ejs');
+
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+// app.use(flash());
 
 
 //load pages
@@ -60,20 +64,21 @@ app.post("/send", (req,res) => {
         }
     });
     let mailOptions = {
-        from: '"website" process.env.USER_EMAIL', // source of email
+        from: 'website', // source of email
         to: 'osamaasaid@gmail.com', // list of receivers
         subject: 'Hello ✔', // Subject line
         text: output // entire email with the sender info
     };
     transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
+        if(!error) {
+            res.render('pages/thanks');
+            // res.redirect('pages/index');
+            console.log(info);
+            console.log('Message sent');
+        }
+        else if (error) {
             console.log(error);
         }
-        console.log('Message sent');
-        console.log(info)
-        // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-        res.render('pages/contact');
     });
 });
 
@@ -81,11 +86,5 @@ app.get('*', (req, res) => {
     console.error('404');
     res.status(404).render('pages/404');
 });
-
-
-// app.use(function(err, req, res,next) {
-//     console.error(err.stack);
-//     res.status(404).render('404');
-// })
 
 app.listen(3000);
