@@ -39,6 +39,11 @@ app.get('/contact', (req, res) => {
     res.render('pages/contact');
 });
 
+//thanks page 
+app.get('/thanks', (req,res) => {
+    res.render('pages/thanks');
+});
+
 //send email
 app.post("/send", (req,res) => {
     // console.log(req.body);
