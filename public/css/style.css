@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -177,7 +177,7 @@ button {
     height: 2rem;
     width: 10%;
     background-color: #000;
-    color: #fff;
+    color: #00ffff;
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
 }
