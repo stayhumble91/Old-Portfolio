@@ -5,7 +5,6 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv/config');
-// const flash = require('flash-connect');
 
 //create express instance
 const app = express();
@@ -13,12 +12,9 @@ const app = express();
 //set view engine
 app.set('view engine', 'ejs');
 
-
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// app.use(flash());
-
 
 //load pages
 //welcome page
