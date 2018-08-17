@@ -3,38 +3,10 @@
     margin: 0 auto;
 }
 
-
-header {
-    width: 100%;
-    color: #fff;
-    margin: 0;
-    height: 5rem;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0;
-}
-
-.logo {
-    /* float: left; */
-    font-family: 'Raleway', sans-serif;
-}
-
-.logo > h1 {
-    color: #fff;
-}
-
 a {
     text-decoration: none;
     color: #000;
 }
-
-.nav {
-        /* float: right; */
-        padding-top: 10px;
-        text-align: right;
-    }
 
  .menu a {
     font-family: 'Raleway', sans-serif;
@@ -242,7 +214,7 @@ label {
     }
 
     button {
-        width: 40%;
+        width: 16%;
     }
 
 }
@@ -253,43 +225,15 @@ label {
         max-width: 90%;
     }
 
-    header {
-        margin: 0;
-        height: 3rem;
-        /* padding-top: 2rem; */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    * {
+     box-sizing: border-box;
     }
 
-    label {
+    .content {
         display: block;
-        cursor: pointer;
-        margin: 0;
-    }
-
-   .menu {
-       text-align: center;
-       width: 100%;
-       display: none;
-   }
-
-   .menu a {
-       clear: right;
-       display: block;
-       margin: 0;
-   }
-
-   #toggle:checked + .menu {
-       display: block;
-   }
-
-   #toggle:checked + h1 {
-       display: block;
-   }
-
-    h1 {
-        font-size: 25px;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
     }
 
     .form {
@@ -298,8 +242,9 @@ label {
 
     .wrapper {
         display: block;
-        margin: 0 auto;
+        /*margin: 0 auto;*/
         width: 100%;
+        margin-top: 3rem;
     }
 
     .side {
@@ -315,7 +260,7 @@ label {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 13px;
         width: 100%;
     }
 }
