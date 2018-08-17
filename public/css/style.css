@@ -7,13 +7,13 @@
 header {
     width: 100%;
     color: #fff;
-    margin: 0;  
+    margin: 0;
     height: 5rem;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    line-height: 70px;
+    padding: 0;
 }
 
 .logo {
@@ -31,18 +31,17 @@ a {
 }
 
 .nav {
-   
-}
+        /* float: right; */
+        padding-top: 10px;
+        text-align: right;
+    }
 
  .menu a {
     font-family: 'Raleway', sans-serif;
-    padding-left: 66px;
+    margin: 0 10px;
     font-size: 1rem;
-    display: inline;
-    font-weight: 300;   
     color: black;
-    line-height: 70px;
-} 
+}
 
 a:hover {
     color: #008000;
@@ -53,12 +52,7 @@ a:hover {
     display: grid;
     grid-gap: 4rem;
     grid-template-columns: 65% 35%;
-    grid-template-areas: "content side"; 
-}
-
-.nav {
-    /* float: right; */
-    padding-top: 10px;
+    grid-template-areas: "content side";
 }
 
 .content {
@@ -111,8 +105,8 @@ p {
 
 .samplehead {
     text-align: center;
-    font-family: 'Raleway', sans-serif; 
-    margin-top: 6rem; 
+    font-family: 'Raleway', sans-serif;
+    margin-top: 6rem;
     /* color: #fff; */
 }
 
@@ -139,7 +133,7 @@ p {
 }
 
 /* contact page */
-.form { 
+.form {
     position: absolute;
     width: 100%;
     top: 50%;
@@ -182,7 +176,7 @@ button:hover {
 
 label {
     color: black;
-    font-size: 2rem;
+    font-size: 25px;
     margin: 0 30px 0 0;
     display: none;
 }
@@ -201,8 +195,8 @@ label {
         justify-content: space-between;
         align-items: center;
     }
-    
-  
+
+
     li {
         font-size: 20px;
         padding-right: 30px;
@@ -242,7 +236,7 @@ label {
         width: 80%;
         display: block;
     }
-  
+
     form > input, textarea {
         width: 70%;
     }
@@ -262,7 +256,10 @@ label {
     header {
         margin: 0;
         height: 3rem;
-        padding-top: 2rem;
+        /* padding-top: 2rem; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     label {
@@ -274,10 +271,11 @@ label {
    .menu {
        text-align: center;
        width: 100%;
-       display: none; 
+       display: none;
    }
 
    .menu a {
+       clear: right;
        display: block;
        margin: 0;
    }
@@ -287,7 +285,7 @@ label {
    }
 
    #toggle:checked + h1 {
-       display: none;
+       display: block;
    }
 
     h1 {
@@ -296,7 +294,7 @@ label {
 
     .form {
         margin: 0;
-    } 
+    }
 
     .wrapper {
         display: block;
@@ -314,7 +312,7 @@ label {
 
     .form {
         margin: 0;
-    } 
+    }
 
     p {
         font-size: 1rem;
