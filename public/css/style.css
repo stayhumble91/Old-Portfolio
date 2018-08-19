@@ -3,6 +3,7 @@
     margin: 0 auto;
 }
 
+
 a {
     text-decoration: none;
     color: #000;
@@ -245,6 +246,15 @@ label {
         /*margin: 0 auto;*/
         width: 100%;
         margin-top: 3rem;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    .navbar-brand {
+        font-size: 1.7rem;
+        font-family: 'Raleway', sans-serif;
     }
 
     .side {
