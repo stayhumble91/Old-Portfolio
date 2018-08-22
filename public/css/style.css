@@ -225,9 +225,14 @@ label {
     .container {
         max-width: 90%;
     }
-
+/*
     * {
      box-sizing: border-box;
+    }*/
+
+    .navbar-toggler {
+        border: none;
+        outline: none;
     }
 
     .content {
