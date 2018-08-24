@@ -4,17 +4,19 @@
 }
 
 nav {
-    width: 90%;
+    /*width: 90%;*/
     margin: 0 auto;
 }
 
 .navbar-brand {
     font-size: 2rem;
+    color: #00ffff;
 }
 
 .nav-item {
     margin-left: 3rem;
 }
+
 
 a {
     text-decoration: none;
