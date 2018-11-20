@@ -88,4 +88,7 @@ app.get('*', (req, res) => {
     res.status(404).render('pages/404');
 });
 
-app.listen(3000);
+//server
+app.listen(process.env.PORT || 3000, 
+    () => console.log("Great success!!!")
+);
