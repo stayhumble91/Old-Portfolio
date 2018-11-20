@@ -64,6 +64,10 @@ p {
      margin-top: 3rem;
 }
 
+#note {
+     font-family: 'Raleway', sans-serif;
+}
+
 .sideimg {
     height: 200px;
     width: 100%;
