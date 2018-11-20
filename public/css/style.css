@@ -218,6 +218,8 @@ label {
         display: none;
     }
 
+    margin: 10px;
+
     p {
         width: 80%;
     }
@@ -234,6 +236,14 @@ label {
 
     button {
         width: 16%;
+    }
+
+    #note {
+        font-size: 15px;
+    }
+
+    #note1 {
+        font-size: 25px;
     }
 
 }
