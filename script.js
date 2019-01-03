@@ -89,6 +89,6 @@ app.get('*', (req, res) => {
 });
 
 //server
-app.listen(process.env.PORT || 3000, 
-    () => console.log("Great success!!!")
-);
+const port = process.env.PORT || 3000, 
+app.listen(port);
+console.log(`listening on http://localhost:${port}`);
