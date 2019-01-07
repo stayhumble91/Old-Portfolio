@@ -55,7 +55,7 @@ app.post("/send", (req,res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         secure: true,
-        port: 587,
+        port: 465,
         auth: {
             user: process.env.USER_EMAIL,
             pass: process.env.USER_PASSWORD
@@ -93,3 +93,4 @@ app.get('*', (req, res) => {
 const port = process.env.PORT || 3000;
 app.listen(port);
 console.log(`listening on http://localhost:${port}`);
+console.log('yes')
