@@ -55,14 +55,14 @@ app.post("/send", (req,res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         secure: true,
-        port: 465,
+        port: 587,
         auth: {
             user: process.env.USER_EMAIL,
             pass: process.env.USER_PASSWORD
         },
-        tls: {
-            rejectUnauthorized: false
-        }
+        // tls: {
+        //     rejectUnauthorized: false
+        // }
     });
     let mailOptions = {
         from: 'website', // source of email
