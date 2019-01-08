@@ -53,7 +53,7 @@ app.post("/send", (req,res) => {
     `;
 
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: 'Gmail',
         secure: true,
         port: 465,
         auth: {
@@ -62,7 +62,7 @@ app.post("/send", (req,res) => {
         }
     });
     let mailOptions = {
-        from: 'osamaasaidacct@gmail.com', // source of email
+        from: '"Portfolio" <osamaasaidacct@gmail.com>', // source of email
         to: 'osamaasaid@gmail.com', // list of receivers
         subject: 'Hello ✔', // Subject line
         text: output // entire email with the sender info
