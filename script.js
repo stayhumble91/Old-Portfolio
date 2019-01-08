@@ -53,7 +53,7 @@ app.post("/send", (req,res) => {
     `;
 
     let transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        host: 'Gmail',
         secure: true,
         port: 465,
         auth: {
