@@ -62,8 +62,8 @@ app.post("/send", (req,res) => {
         }
     });
     let mailOptions = {
-        from: '"Portfolio" <osamaasaidacct@gmail.com>', // source of email
-        to: 'osamaasaid@gmail.com', // list of receivers
+        from: '"Portfolio" <${osamaasaidacct@gmail.com}>', // source of email
+        to: '<${osamaasaid@gmail.com}>', // list of receivers
         subject: 'Hello ✔', // Subject line
         text: output // entire email with the sender info
     };
