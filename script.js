@@ -59,6 +59,9 @@ app.post("/send", (req,res) => {
         auth: {
             user: process.env.USER_EMAIL,
             pass: process.env.USER_PASSWORD
+        },
+        tls: {
+            rejectUnauthorized: false;
         }
     });
     let mailOptions = {
