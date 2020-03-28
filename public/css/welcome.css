@@ -1,6 +1,7 @@
 body {
-    background-color: rgb(0, 0, 0);
-    color: #00ffff;
+    background-color: rgb(53, 47, 47);
+    background-image: url();
+    color: #a9c5c5;;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
 }
 
 .container a {
-    color: #00ffff;
+    color: #a9c5c5;;
     text-decoration: none;
 }
 
@@ -31,7 +32,7 @@ body {
     color: #008000;
 }
 span {
-    color: #e03a7a;
+    color: #346b42;
 }
 
 /*media queries*/
